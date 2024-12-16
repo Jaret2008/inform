@@ -1,0 +1,67 @@
+<html lang="en" class="hydrated">
+
+<head>
+    <link rel="icon" type="image/png" href="logooo.png">
+    <link rel="stylesheet" href="venta.css">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style data-styles="">
+        ion-icon {
+            visibility: hidden
+        }
+
+        .hydrated {
+            visibility: inherit
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta</title>
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝗧𝗲𝗰</h2>
+        <nav class="navegar">
+            <a href="index.html">Inicio</a>
+            <a href="venta.html">Venta</a>
+
+        </nav>
+    </header>
+
+    <br>
+    <div class="block">
+        <div class="rep1" onclick="showPopup('Gama Baja -- S/ 411.17', 'Computadora básica para estudiantes.')">
+            <img class="gorro" src="gorro3.png" alt="">
+            <img src="https://www.pcfactory.com.pe/public/landingpage/armamos-tu-pc/img/Estudiante-pro.png" alt="">
+            <p>Computadora<br><span>Gama baja</span></p>
+        </div>
+
+        <div class="rep2" onclick="showPopup('Gama Media -- S/ 482.00', 'Computadora ideal para tareas y gaming.')">
+            <img class="gorro" src="gorro3.png" alt="">
+            <img src="https://www.pcfactory.com.pe/public/landingpage/armamos-tu-pc/img/Gamer-Strike-Pro-2K.png" alt="">
+            <p>Computadora<br><span>Gama media</span></p>
+        </div>
+
+        <div class="rep3" onclick="showPopup('Gama Alta -- S/ 748.25', 'Computadora potente para diseño y rendimiento.')">
+            <img class="gorro" src="gorro3.png" alt="">
+            <img src="https://www.pcfactory.com.pe/public/landingpage/armamos-tu-pc/img/Disenador-Pro.png" alt="">
+            <p>Computadora<br><span>Gama alta</span></p>
+        </div>
+    </div>
+
+
+    <div id="popup" class="popup">
+        <div class="popup-background"></div> <!-- Capa para el fondo -->
+        <h3 class="ver" id="popupTitle"></h3>
+        <p class="ver" id="popupDesc"></p>
+        <button onclick="closePopup()">Cerrar</button>
+    </div>
+
+    <script src="pc.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

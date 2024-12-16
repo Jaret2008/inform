@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(fffd.webp);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    backdrop-filter: blur(5px); /* Efecto borroso */
+    background-color: rgba(255, 255, 255, 0.047); /* Translúcido */
+    
+}
+.logo{
+    font-family: system-ui;
+    cursor: pointer;
+    font-size: 2.5em;
+    color: white;
+    user-select: none;
+}
+.navegar a {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navegar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navegar a:hover:after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.navegar .btnforms-popup { 
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+.navegar .btnforms-popup:hover {
+    background: white;
+    color: black;
+}
+.QuienesSomos {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.196);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(145, 145, 145, 0.147);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+}
+p {
+    padding: 0px 30px 0px 30px;
+    font-size: 20px;
+    color: white;
+    font-family: system-ui;
+    text-align: center;
+}
+.fb{
+    padding-right: 15px;
+    outline: none;
+    font-size: 2em;
+    transition: transform .2s; 
+}
+.fb a:link {
+    color: #ffffff;
+}
+.fb a:visited {
+    color: #ffffff;
+}
+.fb a:focus {
+    border-bottom: 1px solid;
+    background-color: transparent;
+}
+.yt{
+    padding-right: 15px;
+    outline: none;
+    font-size: 2em;
+    transition: transform .2s; 
+}
+.yt a:link {
+    color: #ffffff;
+}
+.yt a:visited {
+    color: #ffffff;
+}
+.yt a:focus {
+    border-bottom: 1px solid;
+    background-color: transparent;
+}
+.gm{
+    padding-right: 15px;
+    outline: none;
+    font-size: 2em;
+    transition: transform .2s; 
+}
+.gm a:link {
+    color: #ffffff;
+}
+.gm a:visited {
+    color: #ffffff;
+}
+.gm a:focus {
+    border-bottom: 1px solid;
+    background-color: transparent;
+}
+.ws{
+    padding-right: 0px;
+    outline: none;
+    font-size: 2em;
+    transition: transform .2s; 
+}
+.ws a:link {
+    color: #ffffff;
+}
+.ws a:visited {
+    color: #ffffff;
+}
+.ws a:focus {
+    border-bottom: 1px solid;
+    background-color: transparent;
+}
+.fb:hover{
+    transform: scale(1.2); 
+}
+.yt:hover{
+    transform: scale(1.2); 
+}
+.gm:hover{
+    transform: scale(1.2); 
+}
+.ws:hover{
+    transform: scale(1.2); 
+}
+.vinculos{
+    display: flex;
+}
+.register{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 1.5px 4.7px 11px 0.7px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+.tt{
+    font-family: system-ui;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+.info{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #dbe4ed;
+    margin: 0px 0;
+}
+.info label{
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+    position: absolute;
+    top: 35%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.info input:focus~label,
+.info input:valid~label {
+    top: -5px;
+}
+.info input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+    font-family: 'Poppins', sans-serif;
+}
+.info .icon{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    line-height: 57px;
+    color:white;
+    font-size: 1.2em;
+}
+.register .salir{
+    position: absolute;
+    top: 0;
+    right: 0;   
+    width: 45px;
+    height: 45px;
+    background: white;
+    font-size: 2em;
+    color: #1c2833;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.remember{
+    font-family: system-ui;
+    font-size: .9em;
+    color: white;
+    font-weight: 500;
+    margin: -15px 0px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember label input{
+    accent-color: white;
+    margin-right: 10px;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 25px;
+    color: #1c2833;
+    font-weight: 400;
+    font-family: 'Orbitron', sans-serif;
+}
+.register .regis{
+    width: 100%;
+    transition: .10s ease;
+    transition: none;
+    transform: translateX(0);
+    padding: 40px;
+}
+.register .regis{
+    /* display: none; */ 
+}
+.register .regis.active{
+    transition: none;
+    transform: translateX(-400px);
+}
+.register.active-popup{
+    transform: scale(1);
+}
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.QuienesSomos,
+.register {
+    position: absolute;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.QuienesSomos.active-section,
+.register.active-section {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+}
+
+.QuienesSomos:not(.active-section),
+.register:not(.active-section) {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 0;
+}
